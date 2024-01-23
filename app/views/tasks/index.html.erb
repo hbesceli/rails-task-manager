@@ -1,0 +1,7 @@
+<h1>Task List</h1>
+<ol><% @tasks.each do |task|%></ol>
+  <%# What's going on here?  %>
+  <li><%= link_to task.title, "/tasks/" + task.id.to_s %></li>
+  <% end  %>
+</ol>
+<p><%= link_to 'New task', '/tasks/new' %></p>

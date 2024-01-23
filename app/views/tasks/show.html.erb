@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p>This task is <%= @completed_status %></p>
+
+<%# The prefix is the name for the shortcut %>
+<%# link to by default is a get request %>
+<p><%= link_to 'Back to task list', tasks_path%></p>
+
+<p><%= link_to 'Delete', task_path(@task),
+data:{turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
